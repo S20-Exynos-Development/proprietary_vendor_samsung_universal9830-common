@@ -48,6 +48,26 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libepic_helper",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libepic_helper.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libepic_helper.so"],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libfloatingfeature",
 	owner: "samsung",
 	strip: {
@@ -608,23 +628,6 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	check_elf_files: false,
 	relative_install_path: "hw",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libGrallocMapperCamera",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libGrallocMapperCamera.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
 }
@@ -1934,6 +1937,18 @@ cc_prebuilt_binary {
 	name: "cbd",
 	owner: "samsung",
 	srcs: ["proprietary/vendor/bin/cbd"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "epic",
+	owner: "samsung",
+	srcs: ["proprietary/vendor/bin/epic"],
 	check_elf_files: false,
 	strip: {
 		none: true,

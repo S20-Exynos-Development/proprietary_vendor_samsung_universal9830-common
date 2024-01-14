@@ -127,6 +127,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libGLES_mali \
     vulkan.mali \
+    libepic_helper \
     libfloatingfeature \
     libsecnativefeature \
     libsecril-client.exynos990 \
@@ -159,7 +160,6 @@ PRODUCT_PACKAGES += \
     gatekeeper.exynos990 \
     gps.default \
     vendor.samsung.hardware.gnss@2.1-impl \
-    libGrallocMapperCamera \
     libSEF.quram \
     libbauthserver \
     libbauthtzcommon \
@@ -238,6 +238,7 @@ PRODUCT_PACKAGES += \
     vendor.samsung_slsi.hardware.eden_runtime@1.0 \
     manifest_android.hardware.drm@1.3-service.widevine \
     cbd \
+    epic \
     android.hardware.drm@1.3-service.widevine \
     android.hardware.keymaster@4.0_strongbox-service \
     android.hardware.neuralnetworks@1.3-service.eden-drv \
